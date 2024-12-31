@@ -1,0 +1,23 @@
+GO TO KAFKA FOLDER....
+
+
+1. start zookeeper first (in cmd)
+
+>>>     bin\windows\zookeeper-server-start.bat  config\zookeeper.properties
+
+2. start kafka (in cmd)
+
+>>>     bin\windows\kafka-server-start.bat config\server.properties
+
+3. create topic 
+
+>>>     bin\windows\kafka-topics.bat --create --topic user-topic --bootstrap-server localhost:9092
+
+
+4. create producer
+
+>>>     bin\windows\kafka-console-producer.bat --topic user-topic --bootstrap-server localhost:9092
+
+5. create consumer 
+
+>>>     bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092
